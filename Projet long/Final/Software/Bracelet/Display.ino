@@ -1,3 +1,4 @@
+//This function displays the temperature/humidity, number of tags scanned and a compass and SOS SENT! when SOS button is pressed and 
 void LCDdisplay(){
   if(sos == true){
     display.clearDisplay();

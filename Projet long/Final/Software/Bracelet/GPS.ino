@@ -1,3 +1,4 @@
+//This function reads what the GPS module sends and sort the GPS coordinates. Then it sends them via the Sigfox module with the command AT$SS
 void GPS(){
   foundNMEA = gotNMEA = false;
   count = 0;
@@ -23,7 +24,7 @@ void GPS(){
       gotRMC = true;
       
     if (gotGGA || gotRMC){
-      //char *lat, *lon;
+      char *lat, *lon;
       strtok( str + 6, "," );   // skip hour
       
       if (gotRMC)

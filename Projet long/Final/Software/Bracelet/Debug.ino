@@ -1,3 +1,4 @@
+//Prints the information on Serial
 #ifdef DEBUG
 void debug(){
   Serial.println("--------------------------------------------------------------------------------------");

@@ -1,10 +1,11 @@
+//This function reads the temperature and humidity
 void HDC1000 (){
   temperature = HDC1000SENSOR.readTemperature();
   humidity = HDC1000SENSOR.readHumidity();
 }
 
 //--------------------------------------------------------------------------------------------------------------
-
+//This function gets measures of the magnetometer sensor and converts it to draw a compass
 void COMPASS(){
   sensors_event_t getmagmesure; 
   MAGNETOMETERSENSOR.getEvent(&getmagmesure);
@@ -22,7 +23,7 @@ void COMPASS(){
 }
 
 //--------------------------------------------------------------------------------------------------------------
-
+//This is the function that draw a compass on the screen
 void CompassDraw(){
   if((headingDegrees >= 348.75) || (headingDegrees<11.25)){display.drawLine(64,37,64,17, WHITE);}      //----NORD
   else if((headingDegrees >= 11.25) && (headingDegrees<33.75)){display.drawLine(64,37,69,22, WHITE);}  //NNE

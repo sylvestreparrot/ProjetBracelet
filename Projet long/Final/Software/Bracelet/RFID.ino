@@ -1,3 +1,4 @@
+//This function reads the data on RFID Serial, checks if it hasn't been read before and sends it via Sigfox module
 void RFID(){
   int countSameIds=0;
   
